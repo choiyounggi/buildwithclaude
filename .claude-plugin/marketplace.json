@@ -3175,7 +3175,7 @@
   {
     "name": "datacircle",
     "description": "Datacircle is a data co-op. Query your favorite B2B data APIs through us. Same request, same price, no markup. Right now we have 3 live LinkedIn profile APIs that we trust: Up2Data, HarvestAPI and Fetchin.",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "author": {
       "name": "Datacircle",
       "url": "https://datacircle.dev"
@@ -3186,8 +3186,8 @@
       "b2b-data",
       "data-enrichment",
       "linkedin",
-      "lead-generation",
-      "sales-intelligence",
+      "data-api",
+      "linkedin-profile-api",
       "mcp",
       "oauth"
     ],
@@ -3373,6 +3373,90 @@
       "url": "https://github.com/chrisryugj/kordoc.git",
       "path": "plugins/kordoc",
       "ref": "main"
+    }
+  },
+  {
+    "name": "harness-scope",
+    "description": "A Claude Code mod that turns global skills, agents, instruction files (CLAUDE.md and rules) and tools on or off per repo through named profiles. A repo picks a profile with a one-line .claude/harness-scope.json; repos without the file are unchanged. It only reads: no file writes, network requests, child processes or model calls.",
+    "version": "0.1.5",
+    "author": {
+      "name": "shimo4228",
+      "url": "https://github.com/shimo4228"
+    },
+    "homepage": "https://github.com/shimo4228/harness-scope",
+    "repository": "https://github.com/shimo4228/harness-scope",
+    "license": "MIT",
+    "keywords": [
+      "mod",
+      "profiles",
+      "skills",
+      "agents",
+      "claude-code"
+    ],
+    "category": "productivity",
+    "source": {
+      "source": "git-subdir",
+      "url": "https://github.com/shimo4228/harness-scope.git",
+      "path": "plugin",
+      "sha": "efae82bc43c273e096130a7e0e549abf7aa1ed1a"
+    }
+  },
+  {
+    "name": "guardrails",
+    "description": "PreToolUse Bash guard for Claude Code that still holds under --dangerously-skip-permissions. Blocks pipe-to-shell installs, disk wipes and fork bombs; asks before rm -rf, force-push, git reset --hard, DROP/TRUNCATE, kubectl delete, cloud deletes and secret-file reads. 15 rules, each off/ask/block; a project's own config can only tighten them, loosening comes only from your config outside the project. Plus a PostToolUse audit log with secrets redacted and /guardrails:self-test to see every decision without running anything.",
+    "version": "1.2.4",
+    "author": {
+      "name": "choiyounggi",
+      "url": "https://github.com/choiyounggi"
+    },
+    "homepage": "https://github.com/choiyounggi/groundwork/tree/main/plugins/guardrails",
+    "repository": "https://github.com/choiyounggi/groundwork",
+    "license": "MIT",
+    "keywords": [
+      "security",
+      "safety",
+      "guardrails",
+      "hooks",
+      "pretooluse",
+      "destructive-commands",
+      "audit-log",
+      "yolo-mode"
+    ],
+    "category": "security",
+    "source": {
+      "source": "git-subdir",
+      "url": "https://github.com/choiyounggi/groundwork.git",
+      "path": "plugins/guardrails",
+      "ref": "main"
+    }
+  },
+  {
+    "name": "dev-loop",
+    "description": "Multi-agent orchestration grounded in an LLM wiki. /dev-loop:orchestrate splits one goal into a dependency graph of parallel Claude Code sessions, each in its own worktree, and supervises them natively on Orca (a tracked Task + Dispatch per phase, pushed worker_done / question / escalation events instead of polling, stall detection; raw tmux fallback). Every plan decision must cite a page in a bundled best-practice wiki of 400+ pages across 10 domains, checked by machine gates and a fresh-context plan reviewer. Insights from your sessions are queued and turned into reviewed wiki PRs when you run /dev-loop:knowledge-flush (automatic flushing is opt-in and never bypasses permission checks).",
+    "version": "1.32.30",
+    "author": {
+      "name": "choiyounggi",
+      "url": "https://github.com/choiyounggi"
+    },
+    "homepage": "https://github.com/choiyounggi/dev-loop",
+    "repository": "https://github.com/choiyounggi/dev-loop",
+    "license": "MIT",
+    "keywords": [
+      "orchestration",
+      "multi-agent",
+      "parallel-agents",
+      "orca",
+      "tmux",
+      "worktree",
+      "llm-wiki",
+      "planning",
+      "tdd",
+      "knowledge-base"
+    ],
+    "category": "orchestration",
+    "source": {
+      "source": "github",
+      "repo": "choiyounggi/dev-loop"
     }
   },
   {
