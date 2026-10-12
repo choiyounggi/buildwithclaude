@@ -3374,6 +3374,35 @@
       "path": "plugins/kordoc",
       "ref": "main"
     }
+  },
+  {
+    "name": "dev-loop",
+    "description": "Multi-agent orchestration grounded in an LLM wiki. /dev-loop:orchestrate splits one goal into a dependency graph of parallel Claude Code sessions, each in its own worktree, and supervises them natively on Orca (a tracked Task + Dispatch per phase, pushed worker_done / question / escalation events instead of polling, stall detection; raw tmux fallback). Every plan decision must cite a page in a bundled best-practice wiki of 400+ pages across 10 domains, checked by machine gates and a fresh-context plan reviewer. Insights from your sessions are queued and turned into reviewed wiki PRs when you run /dev-loop:knowledge-flush (automatic flushing is opt-in and never bypasses permission checks).",
+    "version": "1.32.30",
+    "author": {
+      "name": "choiyounggi",
+      "url": "https://github.com/choiyounggi"
+    },
+    "homepage": "https://github.com/choiyounggi/dev-loop",
+    "repository": "https://github.com/choiyounggi/dev-loop",
+    "license": "MIT",
+    "keywords": [
+      "orchestration",
+      "multi-agent",
+      "parallel-agents",
+      "orca",
+      "tmux",
+      "worktree",
+      "llm-wiki",
+      "planning",
+      "tdd",
+      "knowledge-base"
+    ],
+    "category": "orchestration",
+    "source": {
+      "source": "github",
+      "repo": "choiyounggi/dev-loop"
+    }
   }
   ]
 }
